@@ -7,20 +7,47 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h2>Registration Form</h2>
-    <p>
-      Create a new account to get started and enjoy seamless access to our
-      feature.
-    </p>
-    <form id="signup" action="">
-      <input id="name" type="text" placeholder="Name" />
-      <input id="email" type="email" placeholder="Email address" />
-      <input id="password" type="password" placeholder="Password" />
-      <input id="confirm" type="password" placeholder="Confirm Password" />
-    </form>
-    <div>
-      <button id="submit">Submit</button>
+    <div class="register">
+      <h2>Registration Form</h2>
+      <p>
+        Create a new account to get started and enjoy seamless access to our
+        feature.
+      </p>
     </div>
-    <script type="module" src="./signup.js"></script>
+    <div class="form_items">
+      <form class="input" id="signup" action="">
+        <input
+          class="input_box"
+          autocomplete="new-name"
+          id="name"
+          type="text"
+          placeholder="Name"
+        />
+        <input
+          class="input_box"
+          autocomplete="off"
+          id="email"
+          type="email"
+          placeholder="Email address"
+        />
+        <input
+          class="input_box"
+          id="password"
+          type="password"
+          placeholder="Password"
+        />
+
+        <input
+          class="input_box"
+          id="confirm"
+          type="password"
+          placeholder="Confirm Password"
+        />
+      </form>
+      <button class="btn_submit" id="submitBtn">Submit</button>
+    </div>
+
+    <script src="./signup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
