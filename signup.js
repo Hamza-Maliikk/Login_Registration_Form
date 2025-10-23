@@ -13,21 +13,57 @@ submitBtn.addEventListener("click", (e) => {
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value.trim();
   const confirm = document.getElementById("confirm").value.trim();
+  const nameAlert = document.getElementById("name_alert");
+  const emailAlert = document.getElementById("email_alert");
+  const passwordAlert = document.getElementById("password_alert");
+  const confirmAlert = document.getElementById("confirm_alert");
 
   if (!nameValid.test(name)) {
-    alert("Please Enter a Valid Name");
+    nameAlert.innerText = `Please Enter valid name`;
+    setTimeout(function () {
+      nameAlert.innerText = "";
+    }, 3000);
+    nameAlert.style.color = "red";
+    nameAlert.style.position = "relative";
+    nameAlert.style.bottom = "45px";
+    nameAlert.style.left = "20px";
+    nameAlert.style.fontSize = "12px";
     return;
   }
   if (!emailValid.test(email)) {
-    alert("Please enter Valid email");
+    emailAlert.innerText = `Please Enter valid email`;
+    setTimeout(function () {
+      emailAlert.innerText = "";
+    }, 3000);
+    emailAlert.style.color = "red";
+    emailAlert.style.position = "relative";
+    emailAlert.style.bottom = "45px";
+    emailAlert.style.left = "20px";
+    emailAlert.style.fontSize = "12px";
     return;
   }
-  if (password == "" || confirm == "") {
-    alert("Enter Password");
+  if (password == "" && confirm == "") {
+    passwordAlert.innerText = `Please Enter password`;
+    setTimeout(function () {
+      passwordAlert.innerText = "";
+    }, 3000);
+    passwordAlert.style.color = "red";
+    passwordAlert.style.position = "relative";
+    passwordAlert.style.bottom = "45px";
+    passwordAlert.style.left = "20px";
+    passwordAlert.style.fontSize = "12px";
     return;
   }
   if (password !== confirm) {
-    alert("Enter same password ");
+        confirmAlert.innerText = `Please Enter same password`;
+    setTimeout(function () {
+      confirmAlert.innerText = "";
+    }, 3000);
+    confirmAlert.style.color = "red";
+    confirmAlert.style.position = "relative";
+    confirmAlert.style.bottom = "45px";
+    confirmAlert.style.left = "20px";
+    confirmAlert.style.fontSize = "12px";
     return;
   }
 
