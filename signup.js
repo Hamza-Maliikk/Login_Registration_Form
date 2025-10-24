@@ -17,21 +17,21 @@ submitBtn.addEventListener("click", (e) => {
   const emailAlert = document.getElementById("email_alert");
   const passwordAlert = document.getElementById("password_alert");
   const confirmAlert = document.getElementById("confirm_alert");
-  
-  if(name === "" && email === "" && password === "" && confirm === ""){
-    const values = [nameAlert, emailAlert, passwordAlert, confirmAlert]
-    values.forEach(alert =>{
-      alert.innerText = `Please Enter values`;
-    setTimeout(function () {
-      nameAlert.innerText = "";
-    }, 3000);
-    alert.style.color = "red";
-    alert.style.position = "relative";
-    alert.style.bottom = "45px";
-    alert.style.left = "20px";
-    alert.style.fontSize = "12px";
-    return
-    })
+
+  if(name == "" && email == "" && password == "" && confirm == "") {
+    const values = [nameAlert, emailAlert, passwordAlert, confirmAlert];
+    values.forEach((alerts) => {
+      alerts.innerText = `Please Enter values`;
+      setTimeout(function () {
+        alerts.innerText = "";
+      }, 3000);
+      alerts.style.color = "red";
+      alerts.style.position = "relative";
+      alerts.style.bottom = "45px";
+      alerts.style.left = "20px";
+      alerts.style.fontSize = "12px";
+    });
+     return;
   }
 
   if (!nameValid.test(name)) {
@@ -47,7 +47,7 @@ submitBtn.addEventListener("click", (e) => {
     return;
   }
   if (!emailValid.test(email)) {
-    emailAlert.innerText = `Please Enter valid email`;
+    emailAlert.innerText = `Please Enter email`;
     setTimeout(function () {
       emailAlert.innerText = "";
     }, 3000);
@@ -71,7 +71,7 @@ submitBtn.addEventListener("click", (e) => {
     return;
   }
   if (password !== confirm) {
-        confirmAlert.innerText = `Please Enter same password`;
+    confirmAlert.innerText = `Please Enter same password`;
     setTimeout(function () {
       confirmAlert.innerText = "";
     }, 3000);
