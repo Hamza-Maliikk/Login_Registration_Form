@@ -7,13 +7,29 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h2>Login Form</h2>
-    <div>
-      <input id="login_mail" type="email" placeholder="Email address" />
-      <input id="login_password" type="password" placeholder="Password" />
+    <div class="register">
+      <h2>Login Form</h2>
+    </div>
+    <div class="form_items">
+      <form action="" class="input" >
+        <input
+          class="input_box"
+          id="login_mail"
+          type="email"
+          placeholder="Email address"
+        />
+        <p id="email_login"></p>
+        <input
+          class="input_box"
+          id="login_password"
+          type="password"
+          placeholder="Password"
+        />
+        <p id="page_login"></p>
+      </form>
     </div>
     <div>
-      <button id="login">Login</button>
+      <button class="btn_submit" id="login">Login</button>
     </div>
     <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

@@ -17,6 +17,22 @@ submitBtn.addEventListener("click", (e) => {
   const emailAlert = document.getElementById("email_alert");
   const passwordAlert = document.getElementById("password_alert");
   const confirmAlert = document.getElementById("confirm_alert");
+  
+  if(name === "" && email === "" && password === "" && confirm === ""){
+    const values = [nameAlert, emailAlert, passwordAlert, confirmAlert]
+    values.forEach(alert =>{
+      alert.innerText = `Please Enter values`;
+    setTimeout(function () {
+      nameAlert.innerText = "";
+    }, 3000);
+    alert.style.color = "red";
+    alert.style.position = "relative";
+    alert.style.bottom = "45px";
+    alert.style.left = "20px";
+    alert.style.fontSize = "12px";
+    return
+    })
+  }
 
   if (!nameValid.test(name)) {
     nameAlert.innerText = `Please Enter valid name`;

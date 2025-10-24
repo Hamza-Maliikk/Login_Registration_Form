@@ -26,6 +26,7 @@
   margin: 10px 400px;
 }
 .input_box {
+  box-shadow: 2px 2px 10px #898D90;
   background-color: #ffff;
   border: none;
   border-radius: 100px;
@@ -44,7 +45,6 @@
     border: none;    
     position: absolute;
     left: 620px;
-    /* margin: auto; */
-    
     border-radius: 40px;
+    cursor: pointer;
 }

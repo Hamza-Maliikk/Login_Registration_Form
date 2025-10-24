@@ -6,11 +6,31 @@ const localPassword = user.password;
 loginbtn.addEventListener("click", () => {
   const emailLogin = document.getElementById("login_mail").value;
   const passwordLogin = document.getElementById("login_password").value;
+
   if (emailLogin === localEmail && passwordLogin !== localPassword) {
-    alert("Enter correct password");
+    const passwordValidate = document.getElementById("page_login");
+    passwordValidate.innerText = `Please Enter valid password`;
+    setTimeout(function () {
+      passwordValidate.innerText = "";
+    }, 3000);
+    passwordValidate.style.color = "red";
+    passwordValidate.style.position = "relative";
+    passwordValidate.style.bottom = "45px";
+    passwordValidate.style.left = "20px";
+    passwordValidate.style.fontSize = "12px";
+    
     return;
   } else if (emailLogin !== localEmail && passwordLogin === localPassword) {
-    alert("Enter registered email");
+    const emailValidate = document.getElementById("email_login");
+    emailValidate.innerText = `Please Enter valid email`;
+    setTimeout(function () {
+      emailValidate.innerText = "";
+    }, 3000);
+    emailValidate.style.color = "red";
+    emailValidate.style.position = "relative";
+    emailValidate.style.bottom = "45px";
+    emailValidate.style.left = "20px";
+    emailValidate.style.fontSize = "12px";
     return;
   } else if (emailLogin === localEmail && passwordLogin === localPassword) {
     Swal.fire({
