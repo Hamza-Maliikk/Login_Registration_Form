@@ -48,3 +48,16 @@
     border-radius: 40px;
     cursor: pointer;
 }
+#welcome{
+  margin: 100px;
+  font-size: 80px;
+  color: #43B37E;
+}
+.name{
+  color: black;
+}
+.thanks{  
+  position: relative;
+  bottom: 80px;
+  padding-left: 100px;
+}
