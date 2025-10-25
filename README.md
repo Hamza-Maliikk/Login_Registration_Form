@@ -65,3 +65,4 @@ If credentials match, the user is redirected to a welcome screen.
 
 If not, an error alert appears asking for correct information.
 
+![image alt](https://github.com/Hamza-Maliikk/Login_Registration_Form/blob/79c7d96af6d80bf699891b3b556113633421e681/image.png)
